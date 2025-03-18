@@ -1,6 +1,6 @@
 # OpenCV_Project
 
-## Video_Recoder
+## 1. Video_Recoder
 웹캠을 통화여 녹화를 하는 기본적인 Recoder 프로그램
  
 ### 기능 설명
