@@ -11,6 +11,8 @@
 5. ESC를 통해서 프로그램 종료
 
 
+<img src="./Video_Recoder/Webcam_output_1.gif">
+
 <br><br><br>
 
 
@@ -24,3 +26,23 @@
 ### 한계점
 간단한 형태의 피규어 이미지는 이러한 방식의 카툰 랜더링이 잘 먹힌다. ex) 드래곤볼, 주술회전   
 하지만 복잡한 형태나 선이 매우 많은 피규어 이미지는 안 그래도 복잡한 형태의 이미지를 더 복잡하게만 만들 뿐 카툰 랜더링의 느낌이 덜하다.
+
+<img src="./simple_CartoonRendering/dragonball.jpg">
+<img src="./simple_CartoonRendering/result_dragonball.PNG">
+
+
+<br><br><br>
+
+
+## 3. Alphabet_AR
+체스판 중앙에 알파벳 A를 3D 형태로 보여주는 AR기능
+
+### 기능
+카메라를 캘리브레이션하고 카메라의 자세를 구한다.  
+이를 통해서 체스판 코너의 구석을 좌표계로 삼아서 알파벳 A를 AR로 보여주는 영상을 제작한다.
+
+### 한계점 
+알파벳 A만 가능하고 아직 다른 것은 불가능하다. 
+AR로 구현하는 대상이 어떤 것인지에 따라 고쳐줘야하는 부분이 많다. 이를 자동으로 해결해주는 함수가 필요하다.   
+
+<img src="./alphabetAR/data/output_AR.gif">
