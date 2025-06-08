@@ -51,7 +51,10 @@ AR로 구현하는 대상이 어떤 것인지에 따라 고쳐줘야하는 부�
 <br><br><br>
 
 ## 4. video_subtitle_ocr_translate_tts
-자막이 있는 영상을 넣으면 다음의 파일이 생성된다.
+
+자막이 있는 영상에서 자막 추출, 번역, 음성 변환 기능을 하는 프로그램이다.
+
+기본적으로 제공하는 video1.mp4(뉴스)와 video2.mp4(공익광고)를 넣으면 다음의 파일이 생성한다.
 
 #### extract_subtiltes.py
 1. 한글 자막을 추출한 json파일    
@@ -80,18 +83,19 @@ AR로 구현하는 대상이 어떤 것인지에 따라 고쳐줘야하는 부�
 <br>
 
 #### cmd pip install
+
+``` # transformers, soundfile, sentencepiece, TTS, opencv-python, easyocr ```
 ```bash
-# transformers, soundfile, sentencepiece, TTS, opencv-python, easyocr 
 pip install transformers soundfile sentencepiece TTS opencv-python easyocr
 ```
 
+``` # hanspell ```
 ```bash
-# hanspell
 pip install git+https://github.com/ssut/py-hanspell.git
 ```
 
+``` PyTorch, Torchaudio ``` 
 ```bash
-# PyTorch, Torchaudio 
 pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.7.0+cu121 torchaudio==2.7.0+cu121
 ```
 
@@ -100,7 +104,7 @@ pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.7.0+cu12
 ### 기능
 
 #### extract_subtiltes.py
-1. video 파일을 10초 동안 훑어보고 영상 내에서 자막이 주로 나오는 구역을 ROI값으로 구한다.
+1. video 파일을 10초 동안 훑어보고 영상 내에서 텍스트가 주로 나오는 구역을 ROI값으로 구한다.
  
 2. 영상 프레임을 2.5초 간격으로 해당 ROI 구역을 확인하고, ocr로 자막을 읽는다.
  
@@ -178,8 +182,8 @@ pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.7.0+cu12
 
 <br>
 
-영어 TTS 데모
-./output/subtitles_en.WAV 참고
+영어 TTS 데모  
+output/subtitles_en.WAV 참고
 
 <br><br>
 
@@ -188,4 +192,3 @@ pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.7.0+cu12
 그래서 무료 패키지인 tesseract등을 사용해보았지만 그나마 easyocr이 정확도가 가장높았다.    
 그래서 자막을 완벽히 검출의 성능이 떨어져 아쉽다. 이는 번역기도 마찬가지이다.     
 한글 자막이 정확해도 번역이 아쉬운 부분들이 있다.
-
