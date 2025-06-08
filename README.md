@@ -48,7 +48,7 @@ AR로 구현하는 대상이 어떤 것인지에 따라 고쳐줘야하는 부�
 <img src="./alphabetAR/data/output_AR.gif">
 
 
-
+<br><br><br>
 
 ## 4. video_subtitle_ocr_translate_tts
 자막이 있는 영상을 넣으면 다음의 파일이 생성된다.
@@ -77,6 +77,9 @@ AR로 구현하는 대상이 어떤 것인지에 따라 고쳐줘야하는 부�
 | TTS | 0.22+ | Coqui-TTS 추론 |
 | soundfile | 0.12+ | WAV 저장 |
 
+<br>
+
+#### cmd pip install
 ```bash
 # transformers, soundfile, sentencepiece, TTS, opencv-python, easyocr 
 pip install transformers soundfile sentencepiece TTS opencv-python easyocr
@@ -91,6 +94,8 @@ pip install git+https://github.com/ssut/py-hanspell.git
 # PyTorch, Torchaudio 
 pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.7.0+cu121 torchaudio==2.7.0+cu121
 ```
+
+<br><br>
 
 ### 기능
 
@@ -110,6 +115,7 @@ pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.7.0+cu12
  
 3. TTS를 통해서 subtitles_en.WAV를 생성한다.
 
+<br><br>
 
 ## 결과물
 ```bash
@@ -170,10 +176,12 @@ pip install --index-url https://download.pytorch.org/whl/cu121 torch==2.7.0+cu12
   },
 ```
 
+<br>
+
 영어 TTS 데모
-[subtitles_en.wav](output/subtitles_en.wav)
+./output/subtitles_en.WAV 참고
 
-
+<br><br>
 
 ### 한계점
 처음 여러 ocr 패키지를 사용해보았지만 성능이 좋은 ocr(네이버 클로바, 구글 등) 대부분은 API를 횟수당 유로로 제공한다.     
