@@ -1,3 +1,8 @@
+"""
+1) ./input에 있는 video를 이용해 자막을 추출한다.
+2) 추출한 자막으로 ./input./subtitles.json, ./input./subtitles.srt 저장
+"""
+
 import cv2, json, easyocr, statistics
 from datetime import timedelta
 from hanspell import spell_checker
